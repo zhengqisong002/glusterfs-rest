@@ -30,23 +30,29 @@ Start the glusterrest service using `sudo glusterrestd`
 
 
 **Create a REST user**  
+
     sudo glusterrest useradd <USERNAME> -g <GROUPNAME>
 
 **Delete a REST user**  
+
     sudo glusterrest userdel <USERNAME>
 
 **Modify user Group**  
+
     sudo glusterrest usermod <USERNAME> -g <GROUPNAME>
 
 **To change the user password**  
+
     sudo glusterrest passwd <USERNAME>
 
 **Modify REST server PORT**  
+
 By default it runs in port 9000, to change
 
     sudo glusterrest port 80
 
 **View Information about REST users, config or Groups**  
+
     sudo glusterrest show users
     sudo glusterrest show config
     sudo glusterrest show groups
