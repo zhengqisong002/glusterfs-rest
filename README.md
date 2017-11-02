@@ -10,6 +10,8 @@ GlusterFS REST API server
     sudo python setup.py install
     sudo glusterrest install # (Reinstall also available, sudo glusterrest reinstall)
 
+
+
 ## Usage
 
 Start the glusterrest service using `sudo glusterrestd`
@@ -72,19 +74,3 @@ Quick summary of APIs available, for detailed documentation run `sudo glusterres
     Attach a host to cluster      POST    /api/1.0/peer/:hostname
     Detach a host from cluster    DELETE  /api/1.0/peer/:hostname
 
-** 安装依赖 **
-apt-get install python-setuptools
- 
-** 启动服务 **
-cd glusterfs-rest
-python setup.py install
-glusterrest install # (Reinstall also available, sudo glusterrest reinstall)
- 
-** 拷贝gunicorn **
-cp /usr/local/bin/gunicorn /usr/bin/
-chmod 777 /usr/bin/gunicorn
- 
-** 启动服务 **
-glusterrest port 80
-sudo glusterrest useradd root -g glusterroot -p root
-glusterrestd
